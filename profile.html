@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile – CSA Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --green:#34AD54;
+  --orange:#FF9933;
+  --light:#f6f8f7;
+  --dark:#222;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+}
+
+/* Layout */
+.dashboard-wrapper{
+  display:flex;
+  min-height:100vh;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 260px;
+  background: var(--green);
+  color: #fff;
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1000;
+}
+
+.dashboard-sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dashboard-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-menu li {
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dashboard-menu li i {
+  margin-right: 12px;
+}
+
+.dashboard-menu li:hover,
+.dashboard-menu li.active {
+  background: rgba(255,255,255,0.2);
+}
+
+.dashboard-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Main Content */
+.main {
+  flex:1;
+  padding: 30px;
+  position: relative;
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.header h1{
+  color:var(--dark);
+}
+
+/* Hamburger Button */
+.hamburger{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+  color: var(--dark);
+}
+
+/* Profile Card */
+.profile-card{
+  background:#fff;
+  border-radius:14px;
+  padding:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  max-width:900px;
+  margin:0 auto;
+}
+
+.profile-top{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  margin-bottom:30px;
+}
+
+.profile-img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:#e6e6e6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  color:#999;
+}
+
+.profile-top h2{
+  margin-bottom:5px;
+}
+
+.profile-top p{
+  color:#666;
+}
+
+/* Form */
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-size:14px;
+  color:#555;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+  border-color:var(--green);
+}
+
+/* Buttons */
+.actions{
+  margin-top:25px;
+  display:flex;
+  gap:15px;
+}
+
+.btn{
+  padding:12px 20px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-size:15px;
+  color:#fff;
+}
+
+.btn-save{
+  background:var(--green);
+}
+
+.btn-password{
+  background:var(--orange);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .dashboard-wrapper{
+    flex-direction: column;
+  }
+  .hamburger {
+    display: block;
+    color: var(--green);
+  }
+
+  .dashboard-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+
+  .dashboard-sidebar.active{
+    transform: translateX(0);
+  }
+
+  .hamburger{
+    display:block;
+  }
+
+  .main{
+    padding:20px;
+  }
+
+  .profile-top{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="dashboard-sidebar" id="sidebar">
+    <a href="index.html" class="navbar-brand d-flex d-lg-none">
+        <img src="img/farm-logo.png" class="site-logo">
+    </a>
+    <ul class="dashboard-menu">
+      <li><a href="dashboard.html"><i class="fa fa-home"></i> Dashboard</a></li>
+      <li><a href="my-share.html"><i class="fa fa-box"></i> My Share</a></li>
+      <li><a href="pickup.html"><i class="fa fa-calendar"></i> Pickup Schedule</a></li>
+      <li><a href="invoices.html"><i class="fa fa-file-invoice"></i> Invoices</a></li>
+      <li class="active"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
+      <li><a href="logout.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="header">
+      <h1>My Profile</h1>
+      <i class="fa fa-bars hamburger" id="hamburger"></i>
+    </div>
+
+    <div class="profile-card">
+
+      <!-- Top -->
+      <div class="profile-top">
+        <div class="profile-img">👤</div>
+        <div>
+          <h2>John Doe</h2>
+          <p>CSA Member</p>
+          <p>Email: john@example.com</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form>
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" value="John Doe">
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" value="john@example.com">
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" value="+91 1234567890">
+          </div>
+
+          <div class="form-group">
+            <label>Share Type</label>
+            <select>
+              <option>Weekly CSA</option>
+              <option>Monthly CSA</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Delivery Location</label>
+            <input type="text" value="Chennai, Tamil Nadu">
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Pickup Day</label>
+            <select>
+              <option>Monday</option>
+              <option>Wednesday</option>
+              <option>Friday</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+          <button type="submit" class="btn btn-save">Save Changes</button>
+          <button type="button" class="btn btn-password">Change Password</button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
