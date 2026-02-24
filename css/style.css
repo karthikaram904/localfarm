@@ -1635,5 +1635,9 @@ background: #f5f7fb;
 {
   
 }
+.navbar-brand.d-flex {
+  padding: 0px;
+}
+
 
 
