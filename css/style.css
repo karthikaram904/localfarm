@@ -1436,21 +1436,22 @@ background: #f5f7fb;
         }
         /* Register Box */
         .register-wrapper {
-            min-height: 120vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f5f7fb;
-        }
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 20px;
+}
 
-        .register-box {
-            width: 100%;
-            max-width: 460px;
-            background: #fff;
-            padding: 40px;
-            border-radius: 0; /* square box */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+.register-box {
+    width: 100%;
+    max-width: 420px;   /* Same as login */
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
         .register-box h2 {
             font-weight: 700;
@@ -1639,6 +1640,7 @@ background: #f5f7fb;
 .navbar-brand.d-flex {
   padding: 0px;
 }
+
 
 
 
