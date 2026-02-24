@@ -1628,6 +1628,9 @@ background: #f5f7fb;
     .sidebar-sec .mb-5 {
         margin-bottom: 15px; /* Reduce spacing in sidebar for mobile */
     }
+    .navbar.navbar-expand-lg.bg-primary.navbar-dark.shadow-sm.py-3.py-lg-0.px-3.px-lg-5 {
+  padding: 0px 10px !important;
+}
 }
 
 .top-bar {
@@ -1647,6 +1650,8 @@ background: #f5f7fb;
   padding: 5px 12px;
   border-radius: 8px;
 }
+
+
 
 
 
