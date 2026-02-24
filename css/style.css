@@ -1399,22 +1399,23 @@ background: none;
   direction: initial;
 }
 /* Login Box */
-        .login-wrapper {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f5f7fb;
-        }
+           .login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa; /* light background */
+    padding: 20px;
+}
 
-        .login-box {
-            width: 100%;
-            max-width: 420px;
-            background: #fff;
-            padding: 40px;
-            border-radius: 0; /* square box */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
         .login-box h2 {
             font-weight: 700;
@@ -1638,6 +1639,7 @@ background: #f5f7fb;
 .navbar-brand.d-flex {
   padding: 0px;
 }
+
 
 
 
