@@ -1633,8 +1633,7 @@ background: #f5f7fb;
 }
 .navbar-brand img
 {
-  filter: brightness(0) saturate(100%) 
-            invert(63%) sepia(93%) saturate(748%) 
-            hue-rotate(347deg) brightness(102%) contrast(101%);
+  
 }
+
 
