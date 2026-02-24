@@ -1627,3 +1627,7 @@ background: #f5f7fb;
         margin-bottom: 15px; /* Reduce spacing in sidebar for mobile */
     }
 }
+
+.top-bar {
+  display: none;
+}
