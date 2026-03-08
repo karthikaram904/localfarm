@@ -68,7 +68,7 @@
     background: var(--secondary);
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1050px) {
     .navbar-dark .navbar-nav .nav-link  {
         padding: 10px;
     }
@@ -1652,6 +1652,7 @@ background: #f5f7fb;
   padding: 5px 12px;
   border-radius: 8px;
 }
+
 
 
 
