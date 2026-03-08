@@ -1429,6 +1429,7 @@ background: none;
         .login-box .btn {
             height: 50px;
             font-weight: 600;
+            width:100%;
         }
         .login-page,.register-page
         {
@@ -1466,6 +1467,7 @@ background: #f5f7fb;
             height: 50px;
             font-weight: 600;
             margin-top: 40px;
+            width:100%;
         }
         .text-left {
   text-align: left;
@@ -1650,6 +1652,7 @@ background: #f5f7fb;
   padding: 5px 12px;
   border-radius: 8px;
 }
+
 
 
 
