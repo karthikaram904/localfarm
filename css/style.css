@@ -1472,7 +1472,7 @@ background: #f5f7fb;
         .text-left {
   text-align: left;
 }
-@media (max-width: 991px) {
+@media (max-width: 1050px) {
 
   /* navbar height stable */
   .navbar {
@@ -1652,6 +1652,7 @@ background: #f5f7fb;
   padding: 5px 12px;
   border-radius: 8px;
 }
+
 
 
 
